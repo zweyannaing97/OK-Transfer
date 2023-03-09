@@ -1,0 +1,17 @@
+.profile_name{
+    font-weight: bolder;
+    text-align: center;
+}
+
+mat-nav-list{
+    font-size: 14px;
+}
+
+.profile-area{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #fff;
+    cursor: pointer;
+}
+

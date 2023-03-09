@@ -1,0 +1,127 @@
+.crud-btns{
+  width: 25px;
+  cursor: pointer;
+}
+.calendar-icon{
+  position: absolute;
+  right: 30px;
+}
+::ng-deep .bs-datepicker {
+  left: unset !important;
+}
+.mptCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f9bb0e;
+}
+.ooredooCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ed1b24;
+}
+.telenorCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #05b8e3;
+}
+.mecCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3a7eed;
+}
+.mytelCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ee6c20;
+}
+.maintoOtherCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #00DB00;
+}
+.breadcrumb-link{
+  cursor: pointer;
+  transition: .5s;
+  opacity: 50%;
+}
+.breadcrumb-link:hover{
+  opacity: 100%;
+}
+
+.table-pagination table
+{
+  width: 100%;
+  white-space: nowrap;
+}
+.table-pagination tr
+{
+  border: 1px solid #d6c7ec;
+}
+.table-pagination table th {
+  font-size: 16px;
+  white-space: nowrap;
+  border-right: 1px solid #d6c7ec;
+  text-align: center;
+  font-weight: 700;
+  padding: 0px 25px;
+}
+.table-pagination table td{
+  text-align: left;
+  border-right: 1px solid #d6c7ec;
+  text-align: center;
+  font-weight: 600;
+  padding: 0px 25px;
+}
+.table-pagination{
+  height: calc(45vh - 120px);
+  overflow: auto;
+}
+.mat-paginator-companyName{
+  width: 100%;
+}
+::ng-deep .mat-paginator-container{
+  justify-content: space-between !important;
+}
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+  text-align: start !important;
+}
+.select2{
+  height: 50px;
+  outline: none;
+  margin-bottom: 10px;
+  width: 200px;
+  padding: 15px 15px;
+  /*select box css*/
+  border-radius: 25px;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  background-color: white;
+
+  &:focus{
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  }
+}
+::placeholder{
+  color: rgba(80, 75, 75, 0.87);
+  font-size: 14px;
+}
+::-moz-placeholder{
+  color: rgba(80, 75, 75, 0.87);
+  font-size: 14px;
+}
+::-webkit-input-placeholder{
+  color: rgba(80, 75, 75, 0.87);
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1551px){
+  .table-pagination{
+    height: calc(62vh - 120px);
+  }
+}

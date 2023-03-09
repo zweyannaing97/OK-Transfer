@@ -1,0 +1,59 @@
+<div class=" p-3">
+  <div class="d-md-flex d-block justify-content-between align-items-center pb-2">
+    <h4>Cash Back To Main Account Listing</h4>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="search-form">
+        <input type="text" name="search" placeholder="Search" class="search-bar" autocomplete="off">
+      </div>
+      <img src="assets/img/icons/SideBar-Icon/Filter%20pansi.png" class="crud-btns pe-2" matTooltip="Filter" (click)="openDialog()"
+           aria-label="Button that displays a tooltip when focused or hovered over" >
+      <img src="assets/img/icons/SideBar-Icon/excel%20download%20pansi.svg" alt="" class="crud-btns pe-2" matTooltip="Download"
+           aria-label="Button that displays a tooltip when focused or hovered over">
+      <img src="assets/img/icons/SideBar-Icon/add%20icon.png" alt="" class="crud-btns pe-2" matTooltip="Create New"
+           aria-label="Button that displays a tooltip when focused or hovered over" [routerLink]="'../create-cash-to-main'">
+    </div>
+  </div>
+
+  <!-- table -->
+  <div class="table-pagination">
+    <table mat-table [dataSource]="dataSource" class="text-center">
+
+      <ng-container matColumnDef="merchantAccNumber">
+        <th mat-header-cell *matHeaderCellDef> Advance Merchant Account Number</th>
+        <td mat-cell *matCellDef="let element"> {{element.merchantAccNumber}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="transactionId">
+        <th mat-header-cell *matHeaderCellDef> OK$ Transaction ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.transactionId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="merchantAccName">
+        <th mat-header-cell *matHeaderCellDef>Advance Merchant Account Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.merchantAccName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="transferAmnt">
+        <th mat-header-cell *matHeaderCellDef> Transfer Amount </th>
+        <td mat-cell *matCellDef="let element"> {{element.transferAmnt}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dateTime">
+        <th mat-header-cell *matHeaderCellDef> Transfer Date & Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.dateTime}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+  </div>
+
+  <mat-toolbar>
+    <mat-paginator class="mat-paginator-user-role-permission" [pageSizeOptions]="[10,20, 25, 50, 100]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </mat-toolbar>
+</div>

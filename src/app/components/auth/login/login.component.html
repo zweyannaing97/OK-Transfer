@@ -1,0 +1,42 @@
+<div class="login-s2">
+  <div class="signup-block">
+    <div class="container-fluid d-flex-h-full">
+      <div class="content" fxLayout="row" fxLayoutAlign="end center" fxFlexFill>
+        <div fxFlex.gt-sm="43" fxFlex="100">
+          <div class="mb-20">
+            <img src="../../../../assets/img/ok dollar.png" alt="" style="width: 100px; margin: auto; display: block;">
+            <h3 class="font-weight-bolder text-center auth-head">OK$ Transfer</h3>
+          </div>
+          <div class="login-wrapper">
+            <div>
+              <mat-form-field appearance="outline" class="loginFormField">
+                <mat-label>Enter User Name</mat-label>
+                <mat-icon matPrefix class="field-icon">account_box</mat-icon>
+                <input class="paddingBottom-2" matInput placeholder="">
+                <!-- <mat-hint class="error-message">The Email you entered is incorrect.</mat-hint> -->
+              </mat-form-field>
+
+              <mat-form-field appearance="outline">
+                <mat-label>Enter Password</mat-label>
+                <mat-icon matPrefix class="field-icon">lock</mat-icon>
+                <input class="paddingBottom-2" matInput placeholder="" [type]="hide ? 'password' : 'text'">
+                <mat-icon matSuffix (click)="hide = !hide" class="pointer">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </mat-form-field>
+
+              <div class="text-center">
+                <div>
+                  <a href="javascript:void(0);" class="mt-10 forgotLink" [routerLink]="['/auth/forgot-password']">Forgot
+                    Password?</a>
+                </div>
+                <div>
+                  <mat-checkbox  class="mb-30 rememberCheckBox">Remember Me</mat-checkbox>
+                </div>
+                <button class="loginButton" mat-raised-button color="primary">LogIn</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

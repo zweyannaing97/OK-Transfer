@@ -1,0 +1,71 @@
+<div class="p-4 main-content">
+  <h3>Main To Cash Back Account</h3>
+  <div class="row mb-5 p-1 d-flex justify-content-between">
+    <div class="col-md-4 ">
+      <div>
+        <mat-label for="">Advance Merchant Account Number</mat-label>
+      </div>
+      <mat-form-field class="example-full-width" class="mt-2 mobileNo useraddInput" appearance="fill">
+        <span matPrefix class="prefixNo">+95 &nbsp;</span>
+        <input class="select_search_box" placeholder="09XXXXXXXX" matInput>
+      </mat-form-field>
+      <small class="text-danger fw-bold">Only Allow Advance Merchant OK$ Account Number</small>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-4 ">
+      <div>
+        <mat-label for="">Advance Merchant Account Name</mat-label>
+      </div>
+      <mat-form-field class="example-full-width" class="mt-2" appearance="fill">
+        <input class="select_search_box" placeholder="Enter Account Name" matInput value="Mya Mya" readonly>
+      </mat-form-field>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+
+  <div class="row mb-5 p-1 d-flex justify-content-between">
+    <div class="col-md-4 ">
+      <div>
+        <mat-label for="">Other Cash Back Account Number</mat-label>
+      </div>
+      <mat-form-field class="example-full-width" class="mt-2 mobileNo useraddInput" appearance="fill">
+        <span matPrefix class="prefixNo">+95 &nbsp;</span>
+        <input class="select_search_box" placeholder="09XXXXXXXX" matInput>
+      </mat-form-field>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-4 ">
+      <div>
+        <mat-label for="">Other Cash Back Account Name</mat-label>
+      </div>
+      <mat-form-field class="example-full-width" class="mt-2" appearance="fill">
+        <input class="select_search_box" placeholder="Enter Account Name" matInput>
+      </mat-form-field>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+
+  <div class="row mt-5 pt-5 pb-3">
+    <div class="col-md-4 ">
+      <div>
+        <mat-label for="">Transfer Amount</mat-label>
+      </div>
+      <mat-form-field class="example-full-width" class="mt-2" appearance="fill">
+        <input class="select_search_box" placeholder="Enter Amount" matInput>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<mat-toolbar>
+  <div class="d-flex justify-content-center align-items-center">
+    <button class="proceedBtn" mat-raised-button color="primary" [routerLink]="'../main-to-other-cash-back-listing'">Proceed</button>
+  </div>
+</mat-toolbar>

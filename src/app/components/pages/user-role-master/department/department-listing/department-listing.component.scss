@@ -1,0 +1,113 @@
+.table-pagination table
+{
+  width: 100%;
+  white-space: nowrap;
+}
+.table-pagination tr
+{
+  border: 1px solid #d6c7ec;
+}
+.table-pagination table th {
+  color: #fff;
+  background-color: #c956b5;
+  font-size: 16px;
+  padding-right: 24px;
+  white-space: nowrap;
+  border-right: 1px solid #d6c7ec;
+  text-align: center;
+  font-weight: 700;
+  padding: 0px 25px;
+}
+.table-pagination table td{
+  text-align: left;
+  border-right: 1px solid #d6c7ec;
+  text-align: center;
+  font-weight: 600;
+  padding: 0px 25px;
+}
+.table-pagination{
+  height: calc(85vh - 120px);
+  overflow: auto;
+}
+
+.mat-paginator-companyName{
+  width: 100%;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row
+{
+  padding: 0px !important;
+}
+
+.actionImage{
+    width: 25px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5b5650;
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #5b5650;
+    border-top: 0px solid transparent;
+}
+ /*Left*/
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #5b5650;
+    border-bottom: 0px solid transparent;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #5b5656;
+}
+
+.crud-btns{
+  width: 25px;
+}

@@ -1,0 +1,190 @@
+// ::ng-deep .mat-select-panel
+// {
+//   min-width: calc(100% + 94px) !important;
+// }
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+  
+  // .select_user_role_permission_filter{
+  //     height: 50px;
+  //     outline: none;
+  //     margin-bottom: 10px;
+  //     width: 100%;
+  //     padding: 15px 15px;
+  //     border-radius: 25px;
+  //     border: 1px solid #cccccc;
+  //     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  //     background-color:white;
+  // }
+  .content_outer{
+      padding: 15px 20px 20px;
+  }
+  label{
+      margin-top: 15px;
+      font-weight: 500;
+  }
+  ::placeholder{
+      color: rgba(80, 75, 75, 0.87);
+      font-size: 14px;
+  }
+  ::-moz-placeholder{
+      color: rgba(80, 75, 75, 0.87);
+      font-size: 14px;
+  }
+  ::-webkit-input-placeholder{
+      color: rgba(80, 75, 75, 0.87);
+      font-size: 14px;
+  }
+  .filter_select_header
+  {
+    background: #eae3f3;
+  }
+    .modal-header{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 1rem 1rem;
+      border-bottom: 1px solid #EEEEEE;
+      border-top-left-radius: 0.3rem;
+      border-top-right-radius: 0.3rem;
+      background: #c956b5;
+  
+  }
+  
+  .select_search_box{
+    background: #ffffff !important;
+    border-radius: 30px !important;
+    padding-left: 12px !important;
+    border-top: 0 !important;
+    padding-bottom: 8px !important;
+    padding-top: 4px !important;
+    margin-bottom: 0%;
+  }
+  
+  .select_search_box {
+    width: 133px;
+  }
+  
+  .datePicker mat-icon
+  {
+    vertical-align: top !important;
+  }
+  
+  .mat-select-panel{
+    max-width: 320px;
+    max-height: 188px;
+  }
+  .mat-form-field-underline
+  {
+    display: none;
+  }
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+  .mat-form-field-flex
+  {
+    padding-top: 0 !important;
+  }
+  button.mat-focus-indicator.mat-icon-button.mat-button-base
+  {
+    vertical-align: sub;
+  }
+  
+  .apply {
+    background: #4c86c6;
+    color: #ffffff;
+    border: solid 2px #ffffff;
+    border-radius: 30px;
+    width: 143px;
+    font-size: 20px;
+    box-shadow: 0px 8px 15px #888888;
+  }
+  
+  .reset {
+    background: #ff0000;
+    color: #ffffff;
+    margin-right: 30px;
+    border: solid 2px #ffffff;
+    border-radius: 30px;
+    width: 143px;
+    font-size: 20px;
+    box-shadow: 0px 8px 15px #888888;
+  }
+  
+  .DatePicker{
+   
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  
+  }
+  
+  /////
+  
+  .select2{
+    height: 50px;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90% !important;
+    padding: 15px 15px;
+    &:focus{
+      box-shadow: #dfd6c2 3px 3px 3px 0px;
+    }
+    /*select box css*/
+    border-radius: 25px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    background-color: white;
+  }
+  
+  .filter_select_header .filter_text {
+    padding: 0 7px;
+  }
+  .filter_select_header .check_uncheck_btn {
+    font-size: 12px;
+    padding: 0 6px;
+  }
+  .filter_select_header {
+    background: #dfd6c2;
+    display: flex;
+  }
+  mat-form-field .select_search_box{
+    background: #ffffff !important;
+    border-radius: 30px !important;
+    padding-left: 12px !important;
+    border-top: 0 !important;
+    padding-bottom: 8px !important;
+    padding-top: 4px !important;
+    margin-bottom: 0%;
+  }
+  .filter_select_header {
+    display: flex;
+    place-content: start !important;
+  }
+  
+  .datepicker{
+    height: 50px;
+    outline: none;
+    margin-bottom: 7px;
+    margin-top: 10px;
+    padding: 13px 15px;
+    font-weight: 500;
+    width: 90%;
+    border-radius: 25px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    background-color: white;
+  }
+  
+  .datepicker .bs-datepicker-head {
+    background-color: #ffb81c !important;
+  }
+  
+  .theme-green .bs-datepicker-head {
+    background-color:  #ffb81c !important;
+  }
+  

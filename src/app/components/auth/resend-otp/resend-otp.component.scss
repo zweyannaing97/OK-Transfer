@@ -1,0 +1,41 @@
+.otp_head{
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.otp_expire{
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  transform: rotate(-90deg);
+
+  text {
+      transform: rotate(90deg);
+  }
+}
+
+.circle_animation {
+stroke-dasharray: 440;
+stroke-dashoffset: 440;
+transition: all 1s linear;
+}
+
+.enter_otp{
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  width: 320px;
+  margin-top: 10px;
+}

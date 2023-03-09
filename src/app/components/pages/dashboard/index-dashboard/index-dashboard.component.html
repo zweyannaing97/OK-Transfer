@@ -1,0 +1,920 @@
+<div class="main-content">
+    <div class=" container-height">
+
+        <div class="row mx-2 my-4">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center p-2">
+                  <h3>Operator Base Total Transfer Amount Month Wise</h3>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <img  class="crud-btns" matTooltip="Filter"  (click)="openDialog('1')"
+                            aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/icons/SideBar-Icon/Filter%20pansi.png" alt="" >
+                    <div>
+                    <div class="m-3">
+                      <mat-select class="select2 dashboardSelect2 select_remove_cashback_filter mat-select-filter" panelClass="myPanelClass1"
+                                  disableOptionCentering placeholder="Select">
+                        <mat-option [value]=1>Daily</mat-option>
+                        <mat-option value=2>Weekly</mat-option>
+                        <mat-option value=3>Monthly</mat-option>
+                        <mat-option value=4>Quarterly</mat-option>
+                        <mat-option value=5>Yearly</mat-option>
+                      </mat-select>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12 px-5">
+              <div class="card shadow row flex-row justify-content-between align-items-center p-3">
+                <div id="baseTotalChart" class="col-lg-6 d-flex justify-content-start">
+                  <apx-chart routerLink="operator-total-month-chart"
+                    [series]="baseTotalChartOpt.series"
+                    [colors]="baseTotalChartOpt.colors"
+                    [chart]="baseTotalChartOpt.chart"
+                    [labels]="baseTotalChartOpt.labels"
+                    [responsive]="baseTotalChartOpt.responsive"
+                    [dataLabels]="baseTotalChartOpt.dataLabels"
+                    [legend]="baseTotalChartOpt.legend"
+                    [plotOptions]="baseTotalChartOpt.plotOptions"
+                    style="width: 100%;height: 100%;"
+                  ></apx-chart>
+                </div>
+                <div class="col-lg-6 pe-2">
+                  <div class=" d-flex justify-content-between align-items-center ">
+                    <div class="col-2 d-flex align-items-start">
+                      <div class="mptCircle me-2"></div>
+                      <p>MPT</p>
+                    </div>
+                    <h5 class="col-2">8,150,000</h5>
+                    <h5 class="col-2">25%</h5>
+                  </div>
+                  <mat-divider></mat-divider>
+                  <div class="d-flex justify-content-between align-items-center ">
+                    <div class="col-2 d-flex align-items-start">
+                      <div class="ooredooCircle me-2"></div>
+                      <p>Ooredoo</p>
+                    </div>
+                    <h5 class="col-2">5,320,000</h5>
+                    <h5 class="col-2">23%</h5>
+                  </div>
+                  <mat-divider></mat-divider>
+                  <div class="d-flex justify-content-between align-items-center ">
+                    <div class="col-2 d-flex align-items-start">
+                      <div class="telenorCircle me-2"></div>
+                      <p>Telenor</p>
+                    </div>
+                    <h5 class="col-2">4,360,000</h5>
+                    <h5 class="col-2">20%</h5>
+                  </div>
+                  <mat-divider></mat-divider>
+                  <div class="d-flex justify-content-between align-items-center ">
+                    <div class="col-2 d-flex align-items-start">
+                      <div class="mecCircle me-2"></div>
+                      <p>MEC</p>
+                    </div>
+                    <h5 class="col-2">2,580,000</h5>
+                    <h5 class="col-2">10%</h5>
+                  </div>
+                  <mat-divider></mat-divider>
+                  <div class="d-flex justify-content-between align-items-center ">
+                    <div class="col-2 d-flex align-items-start">
+                      <div class="mytelCircle me-2"></div>
+                      <p>Mytel</p>
+                    </div>
+                    <h5 class="col-2">1,120,000</h5>
+                    <h5 class="col-2">20%</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-2">
+              <section class="slide-chart m-3" *ngIf="customOptions">
+                <owl-carousel-o [options]="customOptions">
+                  <ng-template carouselSlide >
+                    <div class="card shadow dashCard" [routerLink]="'mpt-month-chart'">
+                      <div class="d-flex justify-content-between pt-2">
+                        <div class="px-3">
+                          <p class="sHeader">MPT</p>
+                        </div>
+                      </div>
+                      <div id="mptbaseTotalChart">
+                        <apx-chart
+                          [series]="mptbaseTotalChartOpt.series"
+                          [colors]="mptbaseTotalChartOpt.colors"
+                          [chart]="mptbaseTotalChartOpt.chart"
+                          [labels]="mptbaseTotalChartOpt.labels"
+                          [responsive]="mptbaseTotalChartOpt.responsive"
+                          [dataLabels]="mptbaseTotalChartOpt.dataLabels"
+                          [legend]="mptbaseTotalChartOpt.legend"
+                          [plotOptions]="mptbaseTotalChartOpt.plotOptions"
+                          style="width: 100%;height: 100%;"
+                        ></apx-chart>
+                      </div>
+                      <div class="pt-3 d-block">
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mptCircle me-2" style="background-color: #FCD97C"></div>
+                            <p>Main To Cash Back</p>
+                          </div>
+                          <p>1,200,000</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mptCircle me-2" style="background-color: #FAC943"></div>
+                            <p>Cash Back To Main</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mptCircle me-2" style="background-color: #F9BB12"></div>
+                            <p>Main To Other Cash Back</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mptCircle me-2"></div>
+                            <p>Cash Back To Other Main</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mptCircle me-2"style="background-color: #D09A05"></div>
+                            <p>Pay To</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+                      </div>
+                    </div>
+                  </ng-template>
+                  <ng-template carouselSlide>
+                    <div class="card shadow dashCard" [routerLink]="'ooredoo-month-chart'">
+                      <div class="d-flex justify-content-between pt-2">
+                        <div class="px-3">
+                          <p class="sHeader">Ooredoo</p>
+                        </div>
+                      </div>
+                      <div id="ooredoobaseTotalChart">
+                        <apx-chart
+                          [series]="ooredoobaseTotalChartOpt.series"
+                          [colors]="ooredoobaseTotalChartOpt.colors"
+                          [chart]="ooredoobaseTotalChartOpt.chart"
+                          [labels]="ooredoobaseTotalChartOpt.labels"
+                          [responsive]="ooredoobaseTotalChartOpt.responsive"
+                          [dataLabels]="ooredoobaseTotalChartOpt.dataLabels"
+                          [legend]="ooredoobaseTotalChartOpt.legend"
+                          [plotOptions]="ooredoobaseTotalChartOpt.plotOptions"
+                          style="width: 100%;height: 100%;"
+                        ></apx-chart>
+                      </div>
+                      <div class="pt-3 d-block">
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="ooredooCircle me-2" style="background-color: #F6969B"></div>
+                            <p>Main To Cash Back</p>
+                          </div>
+                          <p>1,000,000</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="ooredooCircle me-2" style="background-color: #F14D55"></div>
+                            <p>Cash Back To Main</p>
+                          </div>
+                          <p>900,000</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="ooredooCircle me-2"style="background-color: #EA141F"></div>
+                            <p>Main To Other Cash Back</p>
+                          </div>
+                          <p>1,000,000</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="ooredooCircle me-2" style="background-color: #9C0E15"></div>
+                            <p>Cash Back To Other Main</p>
+                          </div>
+                          <p>1,500,000</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="ooredooCircle me-2" style="background-color: #69090D"></div>
+                            <p>Pay To</p>
+                          </div>
+                          <p>920,000</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+                      </div>
+                    </div>
+                  </ng-template>
+                  <ng-template carouselSlide>
+                    <div class="card shadow dashCard" [routerLink]="'telenor-month-chart'">
+                      <div class="d-flex justify-content-between pt-2">
+                        <div class="px-3">
+                          <p class="sHeader">Telenor</p>
+                        </div>
+                      </div>
+                      <div id="telenorbaseTotalChart">
+                        <apx-chart
+                          [series]="telenorbaseTotalChartOpt.series"
+                          [colors]="telenorbaseTotalChartOpt.colors"
+                          [chart]="telenorbaseTotalChartOpt.chart"
+                          [labels]="telenorbaseTotalChartOpt.labels"
+                          [responsive]="telenorbaseTotalChartOpt.responsive"
+                          [dataLabels]="telenorbaseTotalChartOpt.dataLabels"
+                          [legend]="telenorbaseTotalChartOpt.legend"
+                          [plotOptions]="telenorbaseTotalChartOpt.plotOptions"
+                          style="width: 100%;height: 100%;"
+                        ></apx-chart>
+                      </div>
+                      <div class="pt-3 d-block">
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="telenorCircle me-2"style="background-color: #6EE2FC"></div>
+                            <p>Main To Cash Back</p>
+                          </div>
+                          <p>1,200,000</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="telenorCircle me-2"style="background-color: #3BD5FB"></div>
+                            <p>Cash Back To Main</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="telenorCircle me-2"style="background-color: #04ADD3"></div>
+                            <p>Main To Other Cash Back</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="telenorCircle me-2"style="background-color: #037D99"></div>
+                            <p>Cash Back To Other Main</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="telenorCircle me-2"style="background-color: #024E60"></div>
+                            <p>Pay To</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+                      </div>
+                    </div>
+                  </ng-template>
+                  <ng-template carouselSlide>
+                    <div class="card shadow dashCard" [routerLink]="'mec-month-chart'">
+                      <div class="d-flex justify-content-between pt-2">
+                        <div class="px-3">
+                          <p class="sHeader">MEC</p>
+                        </div>
+                      </div>
+                      <div id="mecbaseTotalChart">
+                        <apx-chart
+                          [series]="mecbaseTotalChartOpt.series"
+                          [colors]="mecbaseTotalChartOpt.colors"
+                          [chart]="mecbaseTotalChartOpt.chart"
+                          [labels]="mecbaseTotalChartOpt.labels"
+                          [responsive]="mecbaseTotalChartOpt.responsive"
+                          [dataLabels]="mecbaseTotalChartOpt.dataLabels"
+                          [legend]="mecbaseTotalChartOpt.legend"
+                          [plotOptions]="mecbaseTotalChartOpt.plotOptions"
+                          style="width: 100%;height: 100%;"
+                        ></apx-chart>
+                      </div>
+                      <div class="pt-3 d-block">
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mecCircle me-2" style="background-color: #B4CEF8"></div>
+                            <p>Main To Cash Back</p>
+                          </div>
+                          <p>1,200,000</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mecCircle me-2" style="background-color: #81ADF3"></div>
+                            <p>Cash Back To Main</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mecCircle me-2" style="background-color: #145FD9"></div>
+                            <p>Main To Other Cash Back</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mecCircle me-2" style="background-color: #0F49A7"></div>
+                            <p>Cash Back To Other Main</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mecCircle me-2" style="background-color: #0B3374"></div>
+                            <p>Pay To</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+                      </div>
+                    </div>
+                  </ng-template>
+                  <ng-template carouselSlide>
+                    <div class="card shadow dashCard" [routerLink]="'mytel-month-chart'">
+                      <div class="d-flex justify-content-between pt-2">
+                        <div class="px-3">
+                          <p class="sHeader">Mytel</p>
+                        </div>
+                      </div>
+                      <div id="mytelbaseTotalChart">
+                        <apx-chart
+                          [series]="mytelbaseTotalChartOpt.series"
+                          [colors]="mytelbaseTotalChartOpt.colors"
+                          [chart]="mytelbaseTotalChartOpt.chart"
+                          [labels]="mytelbaseTotalChartOpt.labels"
+                          [responsive]="mytelbaseTotalChartOpt.responsive"
+                          [dataLabels]="mytelbaseTotalChartOpt.dataLabels"
+                          [legend]="mytelbaseTotalChartOpt.legend"
+                          [plotOptions]="mytelbaseTotalChartOpt.plotOptions"
+                          style="width: 100%;height: 100%;"
+                        ></apx-chart>
+                      </div>
+                      <div class="pt-3 d-block">
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mytelCircle me-2" style="background-color: #FFA676"></div>
+                            <p>Main To Cash Back</p>
+                          </div>
+                          <p>1,200,000</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mytelCircle me-2" style="background-color: #FF7D37"></div>
+                            <p>Cash Back To Main</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mytelCircle me-2" style="background-color: #ED5300"></div>
+                            <p>Main To Other Cash Back</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mytelCircle me-2" style="background-color: #B64000"></div>
+                            <p>Cash Back To Other Main</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+                        <div class="d-flex justify-content-between px-2 align-items-center">
+                          <div class="d-flex">
+                            <div class="mytelCircle me-2" style="background-color: #802D00"></div>
+                            <p>Pay To</p>
+                          </div>
+                          <p>15,600</p>
+                        </div>
+
+                        <hr style="margin: 5px 65px 5px 65px; color: azure;">
+                      </div>
+                    </div>
+                  </ng-template>
+                </owl-carousel-o>
+              </section>
+            </div>
+          </div>
+          <div class="row mx-2 my-4">
+            <div class="col-12">
+              <div class="d-flex justify-content-between align-items-center p-2">
+                <h3>Transfer Amount Top Ten List</h3>
+                <div class="d-flex justify-content-between align-items-center">
+                  <img  class="crud-btns" matTooltip="Filter"  (click)="openDialog('2')"
+                        aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/icons/SideBar-Icon/Filter%20pansi.png" alt="" >
+                  <div class="m-3">
+                    <mat-select class="select2 dashboardSelect2 select_remove_cashback_filter mat-select-filter" panelClass="myPanelClass1"
+                                disableOptionCentering placeholder="Select">
+                      <mat-option value=1>Daily</mat-option>
+                      <mat-option value=2>Weekly</mat-option>
+                      <mat-option value=3>Monthly</mat-option>
+                      <mat-option value=4>Quarterly</mat-option>
+                      <mat-option value=5>Yearly</mat-option>
+                    </mat-select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         <div class="col-12 pt-2 row">
+            <div class="col-12 col-md-4">
+
+              <div class="card shadow mt-0 dashCard pointer" (click)="TableView('1')">
+                <h5 class="fw-bold py-2 ps-4">Main To Cash Back</h5>
+                <div class="d-flex my-2 justify-content-between align-items-center">
+                  <div class="px-4">
+                    <div class="d-flex align-items-center">
+                      <h3 class="fw-bolder">410,000</h3>
+                    </div>
+                  </div>
+                  <img alt="" src="../../../../../assets/img/up-arrow.svg" class="upArrow">
+                  <div>
+                    <circle-progress class="pe-2"
+                      [percent]="75"
+                      [title]="'75%'"
+                      [radius]="30"
+                      [outerStrokeWidth]="9"
+                      [innerStrokeWidth]="9"
+                      [outerStrokeGradientStopColor]="'#FF0000'"
+                      [outerStrokeColor]="'#FF0000'"
+                      [innerStrokeColor]="'#FFA4A4'"
+                      [animation]="true"
+                      [titleFontSize]="'15'"
+                      [showSubtitle]="false"
+                      [animationDuration]="100"
+                    ></circle-progress>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow dashCard pointer" (click)="TableView('2')">
+                <h5 class="fw-bold pt-2 ps-4">Cash Back To Main</h5>
+                <div class="d-flex my-2 justify-content-between align-items-center">
+                  <div class="px-4">
+                    <div class="d-flex align-items-center">
+                      <h3 class="fw-bolder">331,800</h3>
+                    </div>
+                  </div>
+                  <img alt="" src="../../../../../assets/img/down-arrow.svg" class="upArrow">
+                  <div>
+                    <circle-progress class="pe-2"
+                       [percent]="40"
+                       [title]="'40%'"
+                       [radius]="30"
+                       [outerStrokeWidth]="9"
+                       [innerStrokeWidth]="9"
+                       [outerStrokeGradientStopColor]="'#FF4500'"
+                       [outerStrokeColor]="'#FF4500'"
+                       [innerStrokeColor]="'#FF946D'"
+                       [animation]="true"
+                       [titleFontSize]="'15'"
+                       [showSubtitle]="false"
+                       [animationDuration]="100"
+                    ></circle-progress>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow dashCard pointer" (click)="TableView('3')">
+                <h5 class="fw-bold pt-2 ps-4">Main To Other Cash Back</h5>
+                <div class="d-flex my-2 justify-content-between align-items-center">
+                  <div class="px-4">
+                    <div class="d-flex align-items-center">
+                      <h3 class="fw-bolder">420,000</h3>
+                    </div>
+                  </div>
+                  <img alt="" src="../../../../../assets/img/up-arrow.svg" class="upArrow">
+                  <div>
+                    <circle-progress class="pe-2"
+                         [percent]="80"
+                         [title]="'80%'"
+                         [radius]="30"
+                         [outerStrokeWidth]="9"
+                         [innerStrokeWidth]="9"
+                         [outerStrokeGradientStopColor]="'#00DB00'"
+                         [outerStrokeColor]="'#00DB00'"
+                         [innerStrokeColor]="'#44FF44'"
+                         [animation]="true"
+                         [titleFontSize]="'15'"
+                         [showSubtitle]="false"
+                         [animationDuration]="100"
+                    ></circle-progress>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow dashCard pointer" (click)="TableView('4')">
+                <h5 class="fw-bold pt-2 ps-4">Cash Back To Other Main</h5>
+                <div class="d-flex my-2 justify-content-between align-items-center">
+                  <div class="px-4">
+                    <div class="d-flex align-items-center">
+                      <h3 class="fw-bolder">335,800</h3>
+                    </div>
+                  </div>
+                  <img alt="" src="../../../../../assets/img/down-arrow.svg" class="upArrow">
+                  <div>
+                    <circle-progress class="pe-2"
+                       [percent]="43"
+                       [title]="'43%'"
+                       [radius]="30"
+                       [outerStrokeWidth]="9"
+                       [innerStrokeWidth]="9"
+                       [outerStrokeGradientStopColor]="'#FFDB00'"
+                       [outerStrokeColor]="'#FFDB00'"
+                       [innerStrokeColor]="'#FFE95B'"
+                       [animation]="true"
+                       [titleFontSize]="'15'"
+                       [showSubtitle]="false"
+                       [animationDuration]="100"
+                    ></circle-progress>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card shadow dashCard pointer" (click)="TableView('5')">
+                <h5 class="fw-bold pt-2 ps-4">Pay To</h5>
+                <div class="d-flex my-2 justify-content-between align-items-center">
+                  <div class="px-4">
+                    <div class="d-flex align-items-center">
+                      <h3 class="fw-bolder">432,000</h3>
+                    </div>
+                  </div>
+                  <img alt="" src="../../../../../assets/img/up-arrow.svg" class="upArrow">
+                  <div>
+                    <circle-progress class="pe-2"
+                                     [percent]="90"
+                                     [title]="'90%'"
+                                     [radius]="30"
+                                     [outerStrokeWidth]="9"
+                                     [innerStrokeWidth]="9"
+                                     [outerStrokeGradientStopColor]="'#0000A4'"
+                                     [outerStrokeColor]="'#0000A4'"
+                                     [innerStrokeColor]="'#3939FF'"
+                                     [animation]="true"
+                                     [titleFontSize]="'15'"
+                                     [showSubtitle]="false"
+                                     [animationDuration]="100"
+                    ></circle-progress>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="card shadow">
+                <div class="d-flex align-items-baseline p-2">
+                  <h4>Top Ten Main To Cash Back Amount</h4>
+                  <div>
+                    <circle-progress *ngIf="mainToCashBackView" class="pe-2"
+                                     [percent]="75"
+                                     [title]="'75%'"
+                                     [radius]="30"
+                                     [outerStrokeWidth]="9"
+                                     [innerStrokeWidth]="9"
+                                     [outerStrokeGradientStopColor]="'#FF0000'"
+                                     [outerStrokeColor]="'#FF0000'"
+                                     [innerStrokeColor]="'#FFA4A4'"
+                                     [animation]="true"
+                                     [titleFontSize]="'15'"
+                                     [showSubtitle]="false"
+                                     [animationDuration]="100"
+                    ></circle-progress>
+                    <circle-progress *ngIf="cashBackToMainView" class="pe-2"
+                                     [percent]="40"
+                                     [title]="'40%'"
+                                     [radius]="30"
+                                     [outerStrokeWidth]="9"
+                                     [innerStrokeWidth]="9"
+                                     [outerStrokeGradientStopColor]="'#FF4500'"
+                                     [outerStrokeColor]="'#FF4500'"
+                                     [innerStrokeColor]="'#FF946D'"
+                                     [animation]="true"
+                                     [titleFontSize]="'15'"
+                                     [showSubtitle]="false"
+                                     [animationDuration]="100"
+                    ></circle-progress>
+                    <circle-progress class="pe-2" *ngIf="mainToOtherCashView"
+                                     [percent]="80"
+                                     [title]="'80%'"
+                                     [radius]="30"
+                                     [outerStrokeWidth]="9"
+                                     [innerStrokeWidth]="9"
+                                     [outerStrokeGradientStopColor]="'#00DB00'"
+                                     [outerStrokeColor]="'#00DB00'"
+                                     [innerStrokeColor]="'#44FF44'"
+                                     [animation]="true"
+                                     [titleFontSize]="'15'"
+                                     [showSubtitle]="false"
+                                     [animationDuration]="100"
+                    ></circle-progress>
+                    <circle-progress class="pe-2" *ngIf="cashBackToOtherMainView"
+                                     [percent]="43"
+                                     [title]="'43%'"
+                                     [radius]="30"
+                                     [outerStrokeWidth]="9"
+                                     [innerStrokeWidth]="9"
+                                     [outerStrokeGradientStopColor]="'#FFDB00'"
+                                     [outerStrokeColor]="'#FFDB00'"
+                                     [innerStrokeColor]="'#FFE95B'"
+                                     [animation]="true"
+                                     [titleFontSize]="'15'"
+                                     [showSubtitle]="false"
+                                     [animationDuration]="100"
+                    ></circle-progress>
+                    <circle-progress class="pe-2" *ngIf="payToView"
+                                     [percent]="90"
+                                     [title]="'90%'"
+                                     [radius]="30"
+                                     [outerStrokeWidth]="9"
+                                     [innerStrokeWidth]="9"
+                                     [outerStrokeGradientStopColor]="'#0000A4'"
+                                     [outerStrokeColor]="'#0000A4'"
+                                     [innerStrokeColor]="'#3939FF'"
+                                     [animation]="true"
+                                     [titleFontSize]="'15'"
+                                     [showSubtitle]="false"
+                                     [animationDuration]="100"
+                    ></circle-progress>
+                  </div>
+                </div>
+                <div id="topten_linechart" *ngIf="mainToCashBackView">
+                  <apx-chart
+                    [series]="toptenlineChartOpt.series"
+                    [colors]="toptenlineChartOpt.colors"
+                    [chart]="toptenlineChartOpt.chart"
+                    [xaxis]="toptenlineChartOpt.xaxis"
+                    [dataLabels]="toptenlineChartOpt.dataLabels"
+                    [stroke]="toptenlineChartOpt.stroke"
+                  ></apx-chart>
+                </div>
+                <div id="cashToMain_linechart" *ngIf="cashBackToMainView">
+                  <apx-chart
+                    [series]="cashToMainlineChartOpt.series"
+                    [colors]="cashToMainlineChartOpt.colors"
+                    [chart]="cashToMainlineChartOpt.chart"
+                    [xaxis]="cashToMainlineChartOpt.xaxis"
+                    [dataLabels]="cashToMainlineChartOpt.dataLabels"
+                    [stroke]="cashToMainlineChartOpt.stroke"
+                  ></apx-chart>
+                </div>
+                <div id="mainToOtherCash_linechart" *ngIf="mainToOtherCashView">
+                  <apx-chart
+                    [series]="mianToOtherCashlineChartOpt.series"
+                    [colors]="mianToOtherCashlineChartOpt.colors"
+                    [chart]="mianToOtherCashlineChartOpt.chart"
+                    [xaxis]="mianToOtherCashlineChartOpt.xaxis"
+                    [dataLabels]="mianToOtherCashlineChartOpt.dataLabels"
+                    [stroke]="mianToOtherCashlineChartOpt.stroke"
+                  ></apx-chart>
+                </div>
+                <div id="cashToOtherMain_linechart" *ngIf="cashBackToOtherMainView">
+                  <apx-chart
+                    [series]="cashToOtherMainlineChartOpt.series"
+                    [colors]="cashToOtherMainlineChartOpt.colors"
+                    [chart]="cashToOtherMainlineChartOpt.chart"
+                    [xaxis]="cashToOtherMainlineChartOpt.xaxis"
+                    [dataLabels]="cashToOtherMainlineChartOpt.dataLabels"
+                    [stroke]="cashToOtherMainlineChartOpt.stroke"
+                  ></apx-chart>
+                </div>
+                <div id="payTo_linechart" *ngIf="payToView">
+                  <apx-chart
+                    [series]="payTolineChartOpt.series"
+                    [colors]="payTolineChartOpt.colors"
+                    [chart]="payTolineChartOpt.chart"
+                    [xaxis]="payTolineChartOpt.xaxis"
+                    [dataLabels]="payTolineChartOpt.dataLabels"
+                    [stroke]="payTolineChartOpt.stroke"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+            </div>
+        <div class="row mx-2 my-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center p-2">
+              <h3>Total Transfer Amount Base Month Wise</h3>
+              <div class="d-flex justify-content-between align-items-center">
+                <img  class="crud-btns" matTooltip="Filter"  (click)="openDialog('1')"
+                      aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/icons/SideBar-Icon/Filter%20pansi.png" alt="" >
+                <div class="m-3">
+                  <mat-select class="select2 dashboardSelect2 select_remove_cashback_filter mat-select-filter" panelClass="myPanelClass1"
+                              disableOptionCentering placeholder="Select">
+                    <mat-option value=1>Daily</mat-option>
+                    <mat-option value=2>Weekly</mat-option>
+                    <mat-option value=3>Monthly</mat-option>
+                    <mat-option value=4>Quarterly</mat-option>
+                    <mat-option value=5>Yearly</mat-option>
+                  </mat-select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="col-12 mb-2">
+        <section class="slide-chart m-3" *ngIf="customOptions2">
+          <owl-carousel-o [options]="customOptions2">
+            <ng-template carouselSlide>
+              <div class="card shadow dashCard redBg">
+                <div class="card-body text-center">
+                  <h5 class="fw-bold ">Total Transfer Amount</h5>
+                  <h5 class="fw-bold">15,000,000</h5>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="card shadow dashCard">
+                <div class="card-body text-center">
+                  <h5 class="fw-bold">Main To Cash Back Amount</h5>
+                  <h5 class="fw-bold">4,500,000</h5>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="card shadow dashCard">
+                <div class="card-body text-center">
+                  <h5 class="fw-bold">Cash Back To Main Account</h5>
+                  <h5 class="fw-bold">2,500,000</h5>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="card shadow dashCard">
+                <div class="card-body text-center">
+                  <h5 class="fw-bold">Main To Other Cash Back</h5>
+                  <h5 class="fw-bold">3,500,000</h5>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="card shadow dashCard">
+                <div class="card-body text-center">
+                  <h5 class="fw-bold">Cash Back To Other Main</h5>
+                  <h5 class="fw-bold">2,500,000</h5>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="card shadow dashCard">
+                <div class="card-body text-center">
+                  <h5 class="fw-bold">Pay To</h5>
+                  <h5 class="fw-bold">2,500,000</h5>
+                </div>
+              </div>
+            </ng-template>
+          </owl-carousel-o>
+        </section>
+      </div>
+      <div class="row px-3">
+        <div class="col-12 col-sm-12 col-md-4 ">
+          <div class="card shadow" id="monthBaseTotalChart" [routerLink]="'total-transfer-chart'">
+            <h5 class="fw-bold p-3">Account</h5>
+            <apx-chart
+              [series]="monthBaseTotalChartOpt.series"
+              [colors]="monthBaseTotalChartOpt.colors"
+              [chart]="monthBaseTotalChartOpt.chart"
+              [labels]="monthBaseTotalChartOpt.labels"
+              [responsive]="monthBaseTotalChartOpt.responsive"
+              [dataLabels]="monthBaseTotalChartOpt.dataLabels"
+              [legend]="monthBaseTotalChartOpt.legend"
+              [plotOptions]="monthBaseTotalChartOpt.plotOptions"
+              style="width: 100%;height: 100%;">
+            </apx-chart>
+            <div class="pt-3 d-block">
+              <div class="d-flex justify-content-between px-2 align-items-center">
+                <div class="d-flex">
+                  <div class="ooredooCircle me-2"></div>
+                  <p>Main To Cash Back</p>
+                </div>
+                <p>4,500,000</p>
+              </div>
+
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+              <div class="d-flex justify-content-between px-2 align-items-center">
+                <div class="d-flex">
+                  <div class="mptCircle me-2"></div>
+                  <p>Cash Back To Main</p>
+                </div>
+                <p>2,500,000</p>
+              </div>
+
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+              <div class="d-flex justify-content-between px-2 align-items-center">
+                <div class="d-flex">
+                  <div class="maintoOtherCircle me-2"></div>
+                  <p>Main To Other Cash Back</p>
+                </div>
+                <p>3,500,000</p>
+              </div>
+
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+              <div class="d-flex justify-content-between px-2 align-items-center">
+                <div class="d-flex">
+                  <div class="mytelCircle me-2"></div>
+                  <p>Cash Back To Other Main</p>
+                </div>
+                <p>2,500,000</p>
+              </div>
+
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+
+              <div class="d-flex justify-content-between px-2 align-items-center">
+                <div class="d-flex">
+                  <div class="mecCircle me-2"></div>
+                  <p>Pay To</p>
+                </div>
+                <p>2,500,000</p>
+              </div>
+
+              <hr style="margin: 5px 65px 5px 65px; color: azure;">
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 ">
+          <div class="card shadow" id="monthBaseTotalbarChart">
+            <h5 class="fw-bold p-3">Amount</h5>
+            <apx-chart
+              [series]="totalBase_chartOpt.series"
+              [chart]="totalBase_chartOpt.chart"
+              [dataLabels]="totalBase_chartOpt.dataLabels"
+              [plotOptions]="totalBase_chartOpt.plotOptions"
+              [xaxis]="totalBase_chartOpt.xaxis"
+              [legend]="totalBase_chartOpt.legend"
+              [colors]="totalBase_chartOpt.colors"
+              [grid]="totalBase_chartOpt.grid"
+            ></apx-chart>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+</div>
+

@@ -1,0 +1,18 @@
+.userProfileHeadingText {
+  color: gray;
+  margin-bottom: 0 !important;
+}
+
+.userProfileDataText {
+  font-size: 18px;
+  margin-top: 3px !important;
+  margin-bottom: 10px !important;
+  font-weight: 600;
+}
+
+.main-content-profile
+{
+  height: calc(105vh - 130px);
+  overflow: auto;
+  overflow-x: hidden;
+}

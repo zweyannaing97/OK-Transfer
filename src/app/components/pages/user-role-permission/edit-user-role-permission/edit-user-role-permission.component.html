@@ -1,0 +1,293 @@
+<div class="main-content">
+
+    <div class="row mx-2 my-4">
+      <h4>Edit User Role Permission</h4>
+    </div>
+
+    <div class="row  mx-1">
+
+
+      <div class="col-md-4">
+        <br>
+        <div class="mb-2">
+        <mat-form-field floatLabel="always">
+            <mat-label class="label-input">User Name<span>*</span></mat-label>
+            <input matInput class="userRolePermissionFormField2" value="Mg Mg" placeholder="Enter User Name">
+            <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <br>
+        <div class="mb-2">
+          <mat-form-field floatLabel="always">
+            <mat-label class="label-input">Password<span>*</span></mat-label>
+            <mat-icon matSuffix (click)="hide = !hide" class="pointer eyesIcon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <input value="asdffdsa" matInput class="userRolePermissionFormField2" placeholder="Enter Password" [type]="hide?'password':'text'">
+            <mat-icon matSuffix></mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <br>
+        <div class="mb-2">
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Mobile Number<span>*</span></mat-label>
+          <span class="country-flag mobileInput" matPrefix style="display: flex; vertical-align: baseline;">
+              &nbsp;<span style="font-size: 14px">+95</span>
+            </span>
+          <input matInput class="userRolePermissionFormField2 paddingBottom-2" value="09448460545" placeholder="09XXXXXXXXX" style="padding-left: 40px;width: 85%">
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row mx-1">
+      <div class="col-md-4 ">
+        <div>
+          <mat-label for="">Select Company Name<span>*</span></mat-label>
+        </div>
+        <div class="m-3">
+          <mat-select class="select2" disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+<!--              <button fxLayout="row" mat-button class="check_uncheck_btn">-->
+<!--                <mat-icon class="secondary-text s-5">-->
+<!--                  check</mat-icon>Check All-->
+<!--              </button>-->
+<!--              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">-->
+<!--                <mat-icon class="secondary-text s-5">-->
+<!--                  clear</mat-icon>Uncheck All-->
+<!--              </button>-->
+            </div>
+            <mat-option value=1>Consumer Good Myanmar Company </mat-option>
+            <mat-option value=2>CGM Myanmar</mat-option>
+          </mat-select>
+        </div>
+      </div>
+      <div class="col-md-4 ">
+        <div>
+          <mat-label for="">Select Department <span>*</span></mat-label>
+        </div>
+        <div class="m-3">
+          <mat-select class="select2" disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+<!--              <button fxLayout="row" mat-button class="check_uncheck_btn">-->
+<!--                <mat-icon class="secondary-text s-5">-->
+<!--                  check</mat-icon>Check All-->
+<!--              </button>-->
+<!--              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">-->
+<!--                <mat-icon class="secondary-text s-5">-->
+<!--                  clear</mat-icon>Uncheck All-->
+<!--              </button>-->
+            </div>
+            <mat-option value=1>Account Department</mat-option>
+            <mat-option value=2>Admin Department</mat-option>
+
+          </mat-select>
+        </div>
+      </div>
+      <div class="col-md-4 ">
+        <div>
+          <mat-label for="">Select Designation<span>*</span></mat-label>
+        </div>
+        <div class="m-3">
+          <mat-select class="select2" disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+<!--              <button fxLayout="row" mat-button class="check_uncheck_btn">-->
+<!--                <mat-icon class="secondary-text s-5">-->
+<!--                  check</mat-icon>Check All-->
+<!--              </button>-->
+<!--              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">-->
+<!--                <mat-icon class="secondary-text s-5">-->
+<!--                  clear</mat-icon>Uncheck All-->
+<!--              </button>-->
+            </div>
+            <mat-option value=1>Manager</mat-option>
+            <mat-option value=2>Sales Person</mat-option>
+
+          </mat-select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mx-1">
+      <div class="col-md-4 ">
+          <div>
+              <mat-label for="">Select User<span>*</span></mat-label>
+            </div>
+        <div class="m-3">
+          <mat-select class="select2 select_remove_cashback_filter mat-select-filter" panelClass="myPanelClass1" [(value)]="selected"
+            disableOptionCentering placeholder="Select">
+            <mat-option value=1 >Admin</mat-option>
+            <mat-option value=2>User</mat-option>
+
+
+
+          </mat-select>
+        </div>
+      </div>
+      <div class="col-md-4 ">
+        <div>
+          <mat-label for="">Select Transaction <span>*</span></mat-label>
+        </div>
+        <div class="m-3">
+          <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
+            </div>
+            <mat-option value=1>Dashboard</mat-option>
+            <mat-option value=2>User Role Master</mat-option>
+            <mat-option value=2>User Role Permission</mat-option>
+            <mat-option value=3>Transfer</mat-option>
+            <mat-option value=8>Report</mat-option>
+            <mat-option value=9>Change Password</mat-option>
+
+
+          </mat-select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div>
+          <mat-label for="">Select Role Permission <span>*</span></mat-label>
+        </div>
+        <div class="m-3">
+          <mat-select class="select2 select_remove_cashback_filter mat-select-filter" disableOptionCentering
+            panelClass="myPanelClass-modal" multiple placeholder="Select">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
+            </div>
+            <mat-optgroup label="Dashboard">
+              <mat-option value=1>View</mat-option>
+              <mat-option value=2>View & Download</mat-option>
+              <mat-option value=3>Create & Upload</mat-option>
+              <mat-option value=4>Updated</mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="User Role Master">
+              <mat-option value=1>View</mat-option>
+              <mat-option value=2>View & Download</mat-option>
+              <mat-option value=3>Create & Upload</mat-option>
+              <mat-option value=4>Updated</mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="User Role Permission">
+              <mat-option value=1>View</mat-option>
+              <mat-option value=2>View & Download</mat-option>
+              <mat-option value=3>Create & Upload</mat-option>
+              <mat-option value=4>Updated</mat-option>
+            </mat-optgroup>
+
+            <mat-optgroup label="Transfer">
+              <mat-option value=1>View</mat-option>
+              <mat-option value=2>View & Download</mat-option>
+              <mat-option value=3>Create & Upload</mat-option>
+              <mat-option value=4>Updated</mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="Report">
+              <mat-option value=1>View</mat-option>
+              <mat-option value=2>View & Download</mat-option>
+              <mat-option value=3>Create & Upload</mat-option>
+              <mat-option value=4>Updated</mat-option>
+            </mat-optgroup>
+
+          </mat-select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row  mx-1">
+      <div class="col-md-4">
+        <br>
+        <div class="mb-2">
+        <mat-form-field floatLabel="always">
+            <mat-label class="label-input">Description</mat-label>
+            <input matInput class="userRolePermissionFormField2 mt-3" placeholder="Enter Description">
+            <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <br>
+        <div>
+            <label for="">Upload Profile Image </label>
+        </div>
+        <div class="mb-2">
+
+
+            <input (change)="onSelectFile($event)" id="file" accept=".png" class="upload-image" type="file" placeholder="Upload Profile Image">
+
+            <mat-icon matSuffix class="upload">folder_open</mat-icon><br>
+            <mat-hint>File Uploads Jpg Format Maximum Size 5 MB.</mat-hint>
+
+
+        </div>
+      </div>
+      <div class="col-md-4 profileImage ">
+        <img [src]="url" alt="Profile Picture" style="width:100px !important">
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <input type="checkbox" name="active" value="active" checked class="activeCheckBox">
+          <label for="">Is Active</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-toolbar>
+    <div class="button_group">
+      <button class="cancel" mat-button [routerLink]="'../../user-role-permission'">Cancel</button>
+      <button class="update" mat-button [routerLink]="'../../user-role-permission'">Update</button>
+    </div>
+  </mat-toolbar>
+

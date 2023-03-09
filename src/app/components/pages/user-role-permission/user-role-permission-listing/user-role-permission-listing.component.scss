@@ -1,0 +1,132 @@
+
+.secondary-table-pagination table th {
+    background: #c956b5;
+    color: #fff;
+    font-size: 16px;
+    padding-right: 24px;
+    white-space: nowrap;
+    border-right: 1px solid #d6c7ec;
+    text-align: center;
+    font-weight: 700;
+    padding: 0px 25px;
+}
+
+
+table {
+ width: 100%;
+ white-space: nowrap;
+
+}
+
+.mat-paginator-user-role-permission{
+ width: 100%;
+ margin-left: 0 !important;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row
+{
+ padding: 0px;
+}
+
+.secondary-table-pagination{
+ height: calc(82vh - 120px);
+ overflow: auto;
+}
+
+.secondary-table-pagination td{border: 1px solid #d6c7ec;
+}
+
+.secondary-table-pagination td{
+    text-align: left;
+    border-right: 1px solid #d6c7ec;
+    text-align: center;
+    font-weight: 600;
+    padding: 0px 25px;
+}
+
+.profileImageList{
+ width: 50px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ padding-left: 0;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row
+{
+ padding: 0 !important;
+}
+
+.crud-btns{
+    width: 40px;
+    padding:0px 5px;
+  }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5b5650;
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #5b5650;
+    border-top: 0px solid transparent;
+}
+ /*Left*/
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right:8px solid #5b5650;
+    border-left: 0px solid transparent;
+}
+
+/*Right*/
+::-webkit-scrollbar-button:single-button:horizontal:increment{
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #5b5650;
+    border-right: 0px solid transparent;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #5b5650;
+    border-bottom: 0px solid transparent;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: #777777 transparent transparent transparent;
+}
+
+
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #5b5656;
+}
+
+.actionImage{
+    width: 25px;
+    cursor: pointer;
+}

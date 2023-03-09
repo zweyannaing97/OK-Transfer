@@ -1,0 +1,80 @@
+
+  <div class="d-flex justify-content-between pb-2 modal-header">
+    <h4 class="text-white">Filter</h4>
+    <mat-icon (click)="onDismiss()" class="close text-white">close</mat-icon>
+  </div>
+  <mat-dialog-content class="mat-typography">
+    <div class="content_outer">
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <div class="my-3">
+            <label for="">Select Company Name</label>
+          </div>
+          <div>
+            <mat-select class="select2" multiple disableOptionCentering panelClass="modalNormalSelect" placeholder="Select">
+              <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                <!-- <mat-label class="label">Filter:</mat-label> -->
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
+            </div>
+                <mat-option value=1 >Consumer Good Myanmar</mat-option>
+                <mat-option value=2 >CGM Company</mat-option>
+
+            </mat-select>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div  class="my-3">
+            <label for="">Select Is Active</label>
+          </div>
+          <div fxLayout="row wrap">
+            <mat-select class="select2 mat-select-filter" panelClass="myPanelClass1" disableOptionCentering
+              placeholder="Select">
+              <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                fxLayoutAlign="start">
+                <!-- <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                  <mat-label class="label">Filter:</mat-label>
+                  <mat-form-field appearance="standard">
+                    <input matInput class="select_search_box" panelClass="myPanelClass1" disableOptionCentering
+                      placeholder="Enter Keyword">
+                  </mat-form-field>
+                </div> -->
+                <button fxLayout="row" mat-button class="check_uncheck_btn">
+                  <mat-icon class="secondary-text s-5">
+                    check</mat-icon>Check All
+                </button>
+                <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                  <mat-icon class="secondary-text s-5">
+                    clear</mat-icon>Uncheck All
+                </button>
+              </div>
+              <mat-option value=1>Yes</mat-option>
+              <mat-option value=2>No</mat-option>
+            </mat-select>
+          </div>
+        </div>
+      </div>
+
+        <div class="button_group  text-center">
+            <button class="reset">Reset</button>
+            <button class="apply">Apply</button>
+        </div>
+
+    </div>
+  </mat-dialog-content>
+
+

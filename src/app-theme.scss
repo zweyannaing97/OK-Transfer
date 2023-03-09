@@ -1,0 +1,116 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// $custom-typography: mat-typography-config ($font-family: '"Open Sans", sans-serif;'
+// );
+
+$custom-typography: mat-typography-config($font-family: '"Open Sans", sans-serif',
+  $headline: mat-typography-level(46px, 52px, 500, 'Rubik', 'sans-serif'),
+  $title: mat-typography-level(40px, 48px, 500, 'Rubik', 'sans-serif'),
+  $subheading-2: mat-typography-level(32px, 36px, 500, 'Rubik', 'sans-serif'),
+  $subheading-1: mat-typography-level(20px, 26px, 500, 'Rubik', 'sans-serif'),
+  $body-1: mat-typography-level(15px, 20px, 400),
+);
+
+@include angular-material-typography($custom-typography);
+
+$mat-primary: (50: #E8EAF6,
+  100: #C5CAE9,
+  200: #9FA8DA,
+  300: #7986CB,
+  400: #5C6BC0,
+  500: #3F51B5,
+  600: #3949AB,
+  700: #303F9F,
+  800: #283593,
+  900: #1A237E,
+  contrast: (50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+  ));
+
+$mat-accent: (50: #eff2fb,
+  100: #afc0e9,
+  200: #afc0e9,
+  300: #90a6e0,
+  400: #708dd7,
+  500: #4e73cd,
+  600: #365dbf,
+  700: #2d4d9f,
+  800: #243e7f,
+  900: #1b2e5f,
+  contrast: (50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+  ));
+
+$mat-red: (50: #ffebee,
+  100: #ffcdd2,
+  200: #ef9a9a,
+  300: #e57373,
+  400: #ef5350,
+  500: #f44336,
+  600: #e53935,
+  700: #d32f2f,
+  800: #c62828,
+  900: #b71c1c,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  ));
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ok-dollar-app-primary: mat-palette($mat-primary);
+// $ok-dollar-app-primary: mat-palette($mat-primary, 100);
+
+
+$ok-dollar-app-accent: mat-palette($mat-accent);
+// $ok-dollar-app-accent: mat-palette($mat-accent, A200, A100, A400);
+
+
+// The warn palette is optional (defaults to red).
+$ok-dollar-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ok-dollar-app-theme: mat-light-theme($ok-dollar-app-primary, $ok-dollar-app-accent, $ok-dollar-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ok-dollar-app-theme);

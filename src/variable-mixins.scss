@@ -1,0 +1,39 @@
+// Variable 
+$primary : #fafafa;
+$primary-light: #fff;
+$secondary : #1976D2;
+$lightgray : #fafafa;
+$darkgray : #333333;
+$textcolor :#000;
+$white : #ffffff;
+$black : #000000;
+$red : #f00000;
+$green : #068119;
+$body-bg : #97520d;
+$brown:#97520d;
+// 
+
+// Mixins
+@mixin position($top: auto, $right: auto, $bottom: auto, $left: auto, $position: relative) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: $position;
+}
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transition($transitions) {
+  -webkit-transition: $transitions;
+  -moz-transition: $transitions;
+  -ms-transition: $transitions;
+  transition: $transitions;
+}
+
+// 

@@ -1,0 +1,319 @@
+<div>
+
+    <div class="modal-header">
+      <h4 class="text-white">Filter</h4>
+      <mat-icon (click)="onDismiss()" class="close text-white">close</mat-icon>
+    </div>
+    <mat-dialog-content class="mat-typography">
+      <div class="content_outer">
+        <div>
+          <label for="">Select Period Date</label>
+        </div>
+        <div class="row rowMargin">
+
+          <div class="col-xs-12 col-12 col-md-6 ">
+            <div>
+
+            <input type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+              [bsConfig]="{ isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true ,showWeekNumbers: false}"
+              [maxDate]="maxDate">
+              <mat-icon class="float-end" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
+            </div>
+          </div>
+
+        </div>
+        <div class="row rowMargin  mt-3">
+
+          <div class="col-md-6">
+
+            <div>
+              <label for="">Select User Name</label>
+            </div>
+            <div fxLayout="row wrap">
+              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <!-- <mat-label class="label">Filter:</mat-label> -->
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-option value=1>Hla Hla</mat-option>
+                <mat-option value=2>Mya Mya</mat-option>
+                <mat-option value=3>Aung Aung</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <label for="">Select Department Name</label>
+            </div>
+
+            <div fxLayout="row wrap">
+              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <!-- <mat-label class="label">Filter:</mat-label> -->
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-option value=1>Account Department</mat-option>
+                <mat-option value=2>Admin Department</mat-option>
+                <mat-option value=3>Sales Department</mat-option>
+              </mat-select>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row rowMargin mt-3">
+          <div class="col-md-6">
+            <div>
+              <label for="">Select Designation</label>
+            </div>
+            <div fxLayout="row wrap">
+              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <!-- <mat-label class="label">Filter:</mat-label> -->
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-option value=1>Accountant</mat-option>
+                <mat-option value=2>Branch Manager</mat-option>
+                <mat-option value="3">Sales Person</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <label for="">Select Mobile Number</label>
+            </div>
+
+            <div fxLayout="row wrap">
+              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <!-- <mat-label class="label">Filter:</mat-label> -->
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-option value=1>+95 945482521</mat-option>
+                <mat-option value=2>+95 958562448</mat-option>
+                <mat-option value=3>+95 945856625</mat-option>
+              </mat-select>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row rowMargin mt-3">
+          <div class="col-md-6">
+            <div>
+              <label for="">Select User Type</label>
+            </div>
+            <div fxLayout="row wrap">
+              <mat-select class="select2 mat-select-filter" multiple panelClass="myPanelClass-modal1" disableOptionCentering
+                placeholder="Select">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="start">
+                  <!-- <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <mat-label class="label">Filter:</mat-label>
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" panelClass="myPanelClass-modal1" disableOptionCentering
+                        placeholder="Enter Keyword">
+                    </mat-form-field>
+                  </div> -->
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-option value=1>User</mat-option>
+                <mat-option value=2>Admin</mat-option>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <label for="">Select Transaction</label>
+            </div>
+            <div fxLayout="row wrap">
+              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <!-- <mat-label class="label">Filter:</mat-label> -->
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-option value=1>Dashboard</mat-option>
+                <mat-option value=2>User Role Master</mat-option>
+                <mat-option value=2>User Role Permission</mat-option>
+                <mat-option value=3>Transfer</mat-option>
+                <mat-option value=8>Report</mat-option>
+                <mat-option value=9>Change Password</mat-option>
+
+              </mat-select>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row rowMargin mt-3">
+          <div class="col-md-6">
+            <div>
+              <label for="">Select Role Permission</label>
+            </div>
+            <div fxLayout="row wrap">
+              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <!-- <mat-label class="label">Filter:</mat-label> -->
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-optgroup label="Dashboard">
+                  <mat-option value=1>View</mat-option>
+                  <mat-option value=2>View & Download</mat-option>
+                  <mat-option value=3>Create & Upload</mat-option>
+                  <mat-option value=4>Updated</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="User Role Master">
+                  <mat-option value=1>View</mat-option>
+                  <mat-option value=2>View & Download</mat-option>
+                  <mat-option value=3>Create & Upload</mat-option>
+                  <mat-option value=4>Updated</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="User Role Permission">
+                  <mat-option value=1>View</mat-option>
+                  <mat-option value=2>View & Download</mat-option>
+                  <mat-option value=3>Create & Upload</mat-option>
+                  <mat-option value=4>Updated</mat-option>
+                </mat-optgroup>
+
+                <mat-optgroup label="Transfer">
+                  <mat-option value=1>View</mat-option>
+                  <mat-option value=2>View & Download</mat-option>
+                  <mat-option value=3>Create & Upload</mat-option>
+                  <mat-option value=4>Updated</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Report">
+                  <mat-option value=1>View</mat-option>
+                  <mat-option value=2>View & Download</mat-option>
+                  <mat-option value=3>Create & Upload</mat-option>
+                  <mat-option value=4>Updated</mat-option>
+                </mat-optgroup>
+              </mat-select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <label for="">Select Description</label>
+            </div>
+            <div fxLayout="row wrap">
+              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+                    <!-- <mat-label class="label">Filter:</mat-label> -->
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-option value=1>Hla Hla</mat-option>
+                <mat-option value=2>Mya Mya</mat-option>
+              </mat-select>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+        <div class="button_group  text-center py-3">
+          <button class="reset">Reset</button>
+          <button class="apply">Apply</button>
+        </div>
+
+    </mat-dialog-content>
+  </div>

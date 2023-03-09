@@ -1,0 +1,9 @@
+npm i ng-apexcharts@1.5.12
+npm i ngx-owl-carousel-o@5.1.1
+npm i @fortawesome/angular-fontawesome@0.9.0
+npm i font-awesome
+npm i @fortawesome/fontawesome-svg-core@1.2.36
+npm i @fortawesome/free-solid-svg-icons@5.15.4
+npm i @fortawesome/fontawesome-free
+npm i @swimlane/ngx-charts
+npm install ng-circle-progress --save

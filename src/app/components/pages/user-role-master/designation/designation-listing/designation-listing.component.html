@@ -1,0 +1,77 @@
+<div class=" p-3">
+    <div class="d-flex justify-content-between align-items-center pb-2">
+      <h4>Designation Listing</h4>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="search-form">
+          <input type="text" name="search" placeholder="Search" class="search-bar" autocomplete="off">
+       </div>
+       <img  class="crud-btns" matTooltip="Filter"
+       aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/icons/SideBar-Icon/Filter%20pansi.png" alt=""  (click)="openDialog()" >
+        <img class="crud-btns" matTooltip="Excel Download"
+             aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/icons/SideBar-Icon/excel%20download%20pansi.svg" alt="">
+       <img src="assets/img/icons/SideBar-Icon/add%20icon.png" alt="" class="crud-btns" matTooltip="Create New"
+       aria-label="Button that displays a tooltip when focused or hovered over" [routerLink]="'../designation-create'">
+      </div>
+
+    </div>
+    <div class="table-pagination">
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="designName">
+          <th mat-header-cell *matHeaderCellDef>Designation Name </th>
+          <td mat-cell *matCellDef="let element" style="width: 40%;">
+            {{element.designName}}
+          </td>
+        </ng-container>
+
+        <!-- Name Column -->
+
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="remark">
+          <th mat-header-cell *matHeaderCellDef> Remark </th>
+          <td mat-cell *matCellDef="let element" style="width: 30%;"> {{element.remark}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="isActive">
+          <th mat-header-cell *matHeaderCellDef> Is Active </th>
+          <td mat-cell *matCellDef="let element" class="{{element.isActive==true? 'text-success':'text-danger'}}"> {{element.isActive==true? 'Yes':'No'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="createdTime">
+          <th mat-header-cell *matHeaderCellDef> 	Created Date & Time </th>
+          <td mat-cell *matCellDef="let element"> {{element.createdTime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="updatedTime">
+          <th mat-header-cell *matHeaderCellDef> Updated Date & Time </th>
+          <td mat-cell *matCellDef="let element"> {{element.updatedTime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Action </th>
+          <td mat-cell *matCellDef="let element" class="justify-content-between d-flex px-2 pt-2">
+            <a routerLink="../designation-edit"  matTooltip="Edit"
+               aria-label="Button that displays a tooltip when focused or hovered over">
+              <img class="actionImage" [src]="element.action" />
+            </a>
+            <a href="#" matTooltip="Delete"
+               aria-label="Button that displays a tooltip when focused or hovered over">
+              <img class="actionImage" src="assets/img/icons/SideBar-Icon/delete-pattern.svg" />
+            </a>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns,sticky:true" ></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+
+    </div>
+    <mat-paginator class="mat-paginator-companyName" [pageSizeOptions]="[10, 20, 25, 50, 100]" showFirstLastButtons
+      aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+
+

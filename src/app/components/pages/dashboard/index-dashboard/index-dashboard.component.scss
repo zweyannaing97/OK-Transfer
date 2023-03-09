@@ -1,0 +1,157 @@
+.select2{
+  height: 50px;
+  outline: none;
+  margin-bottom: 10px;
+  width: 200px;
+  padding: 15px 15px;
+  /*select box css*/
+  border-radius: 25px;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  background-color: white;
+
+  &:focus{
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  }
+}
+::placeholder{
+  color: rgba(80, 75, 75, 0.87);
+  font-size: 14px;
+}
+::-moz-placeholder{
+  color: rgba(80, 75, 75, 0.87);
+  font-size: 14px;
+}
+::-webkit-input-placeholder{
+  color: rgba(80, 75, 75, 0.87);
+  font-size: 14px;
+}
+.crud-btns{
+    width: 25px;
+    cursor: pointer;
+}
+.calendar-icon{
+  position: absolute;
+  right: 30px;
+}
+//::ng-deep .bs-datepicker {
+//  left: unset !important;
+//}
+.mptCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f9bb0e;
+}
+.ooredooCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ed1b24;
+}
+.telenorCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #05b8e3;
+}
+.mecCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3a7eed;
+}
+.mytelCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ee6c20;
+}
+.maintoOtherCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #00DB00;
+}
+.dayText{
+  font-size: 12px;
+  margin: 0;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.upArrow{
+  width: 16px;
+  margin-bottom: 7px;
+}
+.upArrow2{
+  width: 10px;
+  margin-bottom: 7px;
+}
+.redBg{
+  background-color: #FFB6B6;
+}
+
+
+
+//scroll bar css
+.main-content::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: #5b5650;
+  background-clip: padding-box;
+  border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgba(199, 197, 197, 0.25);
+}
+
+.main-content::-webkit-scrollbar-button:single-button {
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}
+
+.main-content::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 8px solid #5b5650;
+  border-top: 0px solid transparent;
+}
+/*Left*/
+.main-content::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right:8px solid #5b5650;
+  border-left: 0px solid transparent;
+}
+
+/*Right*/
+.main-content::-webkit-scrollbar-button:single-button:horizontal:increment{
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid #5b5650;
+  border-right: 0px solid transparent;
+}
+.main-content::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+.main-content::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 8px solid #5b5650;
+  border-bottom: 0px solid transparent;
+}
+
+.main-content::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #777777 transparent transparent transparent;
+}
+.main-content::-webkit-scrollbar-thumb:hover{
+  background-color: #5b5656;
+}
+

@@ -1,0 +1,266 @@
+<div class=" p-3">
+  <div class="d-flex justify-content-between align-items-center pb-2">
+    <h4>Cashback Report</h4>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="search-form">
+        <input type="text" name="search" placeholder="Search" class="search-bar" autocomplete="off">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row  mt-1">
+    <div class="col-xs-12 col-12 col-md-4 form-group ">
+      <div>
+        <label for="">Select Period Date</label>
+      </div>
+
+      <input type="text" placeholder="From Date - To Date" class="form-control datepicker" bsDaterangepicker
+        [bsConfig]="{ showWeekNumbers:false, isAnimated: true, rangeInputFormat : 'ddd,DD-MMM-YYYY', dateInputFormat: 'ddd,DD-MMM-YYYY',showPreviousMonth: true }"
+        [maxDate]="maxDate">
+      <mat-icon class="float-end" style="margin-top:-45px;margin-right:56px;">date_range</mat-icon>
+    </div>
+
+
+
+  </div>
+
+  <div class="row mt-1">
+    <div class="col-md-4 ">
+      <div>
+        <mat-label for="">Transaction Type</mat-label>
+      </div>
+      <div class="m-3">
+        <mat-select [(ngModel)]="selectedCar" class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+            fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+              <mat-form-field appearance="standard">
+                <input matInput class="select_search_box" placeholder="Enter Keywords">
+              </mat-form-field>
+            </div>
+            <button fxLayout="row" mat-button class="check_uncheck_btn">
+              <mat-icon class="secondary-text s-5">
+                check</mat-icon>Check All
+            </button>
+            <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+              <mat-icon class="secondary-text s-5">
+                clear</mat-icon>Uncheck All
+            </button>
+          </div>
+          <mat-option value="1">Main To Cash Back Account</mat-option>
+          <mat-option value="2">Cash Back To Main Account</mat-option>
+          <mat-option value="3">Main To Other Cash Back Account</mat-option>
+          <mat-option value="4">Cash Back To Other Main Account</mat-option>
+
+        </mat-select>
+      </div>
+    </div>
+    <div class="col-md-4 ">
+      <div>
+        <mat-label for="">Transaction Create From</mat-label>
+      </div>
+      <div class="m-3">
+        <mat-select [(ngModel)]="selectedCar2" class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+            fxLayoutAlign="space-between center">
+            <!-- <div fxLayout="row" fxLayoutAlign="center center" class="filter_text">
+
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div> -->
+            <button fxLayout="row" mat-button class="check_uncheck_btn">
+              <mat-icon class="secondary-text s-5">
+                check</mat-icon>Check All
+            </button>
+            <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+              <mat-icon class="secondary-text s-5">
+                clear</mat-icon>Uncheck All
+            </button>
+          </div>
+          <mat-option value="1">Mobile Phone</mat-option>
+          <mat-option value="2">Web Panel</mat-option>
+
+        </mat-select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div>
+        <mat-label for="">Summary</mat-label>
+      </div>
+      <div class="m-3">
+        <mat-select [(ngModel)]="selectedCar3" class="select2 select_remove_cashback_filter mat-select-filter" disableOptionCentering
+          panelClass="myPanelClass-modal" multiple placeholder="Select">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+            fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+              <mat-form-field appearance="standard">
+                <input matInput class="select_search_box" placeholder="Enter Keywords">
+              </mat-form-field>
+            </div>
+            <button fxLayout="row" mat-button class="check_uncheck_btn">
+              <mat-icon class="secondary-text s-5">
+                check</mat-icon>Check All
+            </button>
+            <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+              <mat-icon class="secondary-text s-5">
+                clear</mat-icon>Uncheck All
+            </button>
+          </div>
+          <mat-option value="1">Date</mat-option>
+          <mat-option value="2">Main OK$ Account Number</mat-option>
+          <mat-option value="3">Cash Back OK$ Account Number</mat-option>
+
+
+
+        </mat-select>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row mt-1">
+    <div class="col-md-4 ">
+      <div>
+        <mat-label for="">OK$ Account Number</mat-label>
+      </div>
+      <div class="m-3">
+        <mat-select [(ngModel)]="selectedCar4" class="select2" multiple disableOptionCentering panelClass="myPanelClass-modal" placeholder="Select">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+            fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+              <mat-form-field appearance="standard">
+                <input matInput class="select_search_box" placeholder="Enter Keywords">
+              </mat-form-field>
+            </div>
+            <button fxLayout="row" mat-button class="check_uncheck_btn">
+              <mat-icon class="secondary-text s-5">
+                check</mat-icon>Check All
+            </button>
+            <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+              <mat-icon class="secondary-text s-5">
+                clear</mat-icon>Uncheck All
+            </button>
+          </div>
+          <mat-option value="1">+95 09421134567</mat-option>
+          <mat-option value="2">+95 0975099876</mat-option>
+          <mat-option value="3">+95 0987654321</mat-option>
+
+        </mat-select>
+      </div>
+    </div>
+  </div>
+
+  <mat-toolbar>
+
+    <!-- <div class="button_group">
+            <button class="search" mat-button *ngIf="!ContentTable" (click)="ContentTable = true">Search</button>
+          </div>
+
+          <div class="button_group">
+            <button class="search" mat-button *ngIf="ContentTable" (click)="ContentTable = false">Search</button>
+          </div> -->
+
+    <div class="button_group" *ngIf="selectedCar || selectedCar2 || selectedCar3 || selectedCar4">
+      <button class="clear" mat-button style="margin-right: 30px">Clear</button>
+      <button class="search" mat-button (click)="toggleShow()">Search</button>
+    </div>
+
+  </mat-toolbar>
+
+  <div class="d-flex justify-content-end align-items-center" *ngIf="isShown">
+
+
+    <img class="crud-btns" matTooltip="Excel Download"
+      aria-label="Button that displays a tooltip when focused or hovered over"
+      src="assets/img/icons/SideBar-Icon/excel%20download%20pansi.psvg" alt="">
+
+
+  </div>
+  <div class="table-pagination">
+    <table mat-table [dataSource]="dataSource" *ngIf="isShown">
+
+
+      <ng-container matColumnDef="refID">
+        <th mat-header-cell *matHeaderCellDef>Reference ID</th>
+        <td mat-cell *matCellDef="let element" style="width: 40%;">
+          {{element.refID}}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let element" style="width: 30%;"> {{element.date}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="transtype">
+        <th mat-header-cell *matHeaderCellDef>Transaction Type</th>
+        <td mat-cell *matCellDef="let element"> {{element.transtype}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="transID">
+        <th mat-header-cell *matHeaderCellDef> Transaction ID</th>
+        <td mat-cell *matCellDef="let element" style="width: 40%;">
+          {{element.transID}}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="transform">
+        <th mat-header-cell *matHeaderCellDef> Transaction Created Form </th>
+        <td mat-cell *matCellDef="let element" style="width: 30%;"> {{element.transform}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="AdMerchantNo">
+        <th mat-header-cell *matHeaderCellDef>Advance Merchant Account Number</th>
+        <td mat-cell *matCellDef="let element"> {{element.AdMerchantNo}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="transamount">
+        <th mat-header-cell *matHeaderCellDef>Transfer Amount</th>
+        <td mat-cell *matCellDef="let element"> {{element.transamount}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="AdMerchantName">
+        <th mat-header-cell *matHeaderCellDef>Advance Merchant Account Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.AdMerchantName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="AdMerchantLevel">
+        <th mat-header-cell *matHeaderCellDef>Advance Merchant Account Level</th>
+        <td mat-cell *matCellDef="let element"> {{element.AdMerchantLevel}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="AdMerchantAddress">
+        <th mat-header-cell *matHeaderCellDef>Advance Merchant Account Address</th>
+        <td mat-cell *matCellDef="let element"> {{element.AdMerchantAddress}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="AdMerchantOpName">
+        <th mat-header-cell *matHeaderCellDef>Advance Merchant Operator Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.AdMerchantOpName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="userName">
+        <th mat-header-cell *matHeaderCellDef>User Name</th>
+        <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dateandtime">
+        <th mat-header-cell *matHeaderCellDef>Date & Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.dateandtime}} </td>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns,sticky:true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+  </div>
+  <mat-paginator *ngIf="isShown" class="mat-paginator-companyName" [pageSizeOptions]="[10,20, 25, 50, 100]"
+    showFirstLastButtons aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>

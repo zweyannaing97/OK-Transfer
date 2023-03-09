@@ -1,0 +1,188 @@
+
+  .select2{
+    height: 50px;
+    outline: none;
+    width: 100% !important;
+    padding: 15px 15px;
+    /*select box css*/
+    border-radius: 25px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    background-color: white;
+    &:focus{
+      box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    }
+  }
+::placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-moz-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+::-webkit-input-placeholder{
+    color: rgba(80, 75, 75, 0.87);
+    font-size: 14px;
+}
+.filter_select_header .filter_text {
+    padding: 0 7px;
+}
+.filter_select_header .check_uncheck_btn {
+    font-size: 12px;
+    padding: 0 6px;
+}
+.filter_select_header {
+    background: #dfd6c2;
+    display: flex;
+}
+mat-form-field .select_search_box{
+    background: #ffffff !important;
+    border-radius: 30px !important;
+    padding-left: 12px !important;
+    border-top: 0 !important;
+    padding-bottom: 8px !important;
+    padding-top: 4px !important;
+    margin-bottom: 0%;
+}
+.filter_select_header .mat-form-field-flex {
+    padding-top: 0 !important;
+    border-radius: 51pc;
+    margin: 7px 8px;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+.label{
+    padding-bottom: 4px !important;
+}
+
+textarea.mat-input-element.cdk-textarea-autosize {
+    background-color: #ffffff;
+
+    border: none;
+    height: 50px;
+    outline: none;
+    margin-bottom: 10px;
+    width: 92% !important;
+    padding: 15px 15px;
+    border-radius: 25px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    background-color: white;
+}
+
+.mat-toolbar
+{
+  background-color: #fafafa;
+  display: block !important;
+  text-align: center;
+}
+
+.update {
+    background: #087d74 !important;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 143px;
+    font-size: 20px;
+    box-shadow: 0px 8px 15px #888888;
+  }
+
+  .cancel {
+    background: #ff0000;
+    color: #ffffff;
+    margin-right: 30px;
+    border-radius: 30px;
+    width: 143px;
+    font-size: 20px;
+    box-shadow: 0px 8px 15px #888888;
+  }
+
+  .main-content
+{
+  height: calc(90vh - 60px);
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+
+mat-label span {
+  color: #ff0000 !important;
+}
+
+
+
+input.userRolePermissionFormField2{
+height: 20px;
+outline: none;
+margin: 12px;
+padding: 13px 15px;
+font-weight: 500;
+width: 90%;
+ /*select box css*/
+ border-radius: 25px;
+ border: 1px solid #cccccc;
+ box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+ background-color: white;
+}
+
+.label-input{
+font-size: larger;
+color: #000;
+}
+
+.profileImage
+{
+  display: table-cell;
+  height: 160px;
+}
+.profileImage img
+{
+  vertical-align: bottom;
+  margin-top: 30px;
+  height :100px;
+  width: 100px;
+}
+
+.upload
+{
+margin-left: -35px !important;
+vertical-align: middle;
+}
+
+.mat-hint{
+  color: red;
+}
+.upload-image{
+  height: 50px;
+  outline: none;
+  margin-bottom: 7px;
+  margin-top: 10px;
+  padding: 13px 15px;
+  font-weight: 500;
+  width: 95%;
+   /*select box css*/
+   border-radius: 25px;
+   border: 1px solid #cccccc;
+   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+   background-color: white;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  display: none;
+}
+.eyesIcon{
+  position: absolute;
+  right: 45px;
+  top: -22px;
+}
+  .mobileInput{
+    position: absolute;
+    top: -40px;
+    z-index: 1;
+    left: 20px;
+  }
+
+
+
